@@ -1,0 +1,30 @@
+
+ <a href="plc" routerlink="add">Add Appointments</a>
+
+ <table border="3">
+  <thead>
+      <tr>
+      <th>sNo</th>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Address</th>
+      <th>City</th>
+      <th>Package</th>
+      <th>TrainerPreference</th>
+      <th>Phone Number</th>
+  </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor="let a of apps">
+          <td>{{sNo}}</td>
+          <td>{{a.firstName}}.{{a.lastName}}</td>
+          <td>{{a.age}}</td>
+          <td>{{a.address}}</td>
+          <td>{{a.city}}</td>
+          <td>{{a.package}}</td>
+          <td>{{a.trainerPreference}}</td>
+          <td>{{a.phone}}</td>
+         
+      </tr>
+  </tbody>
+</table>

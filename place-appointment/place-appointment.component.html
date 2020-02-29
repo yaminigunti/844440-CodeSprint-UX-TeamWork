@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment</title>
+    <script type="text/javascript">
+    function displayRadioValue() {
+            var chkmale = document.getElementById("chkmale");
+            var chkfemale = document.getElementById("chkfemale");
+            var chkothers = document.getElementById("chkothers");
+            var trainername = document.getElementById("trainername");
+            var trainername2= document.getElementById("trainername2");
+            var trainername1= document.getElementById("trainername1");
+            trainername1.style.display = chkfemale.checked ? "block" : "none";
+            trainername2.style.display = chkmale.checked ? "block" : "none";
+            trainername.style.display = chkothers.checked ? "block" : "none";
+        }
+        function myFun(package){
+            document.getElementById("result").value=package;
+            document.getElementById("paise").value=00;
+        }
+       
+    </script>
+</head>
+<body>
+    <form  ></form>
+        <table align="page-left">
+            <tr>
+                <td>
+                
+                    <label>Name </label><br>
+                </td>
+                <td>
+                    <input type="text" placeholder="firstname" pattern="[A-Za-z]{4,10}" id="fnm" required/>
+                </td>
+                <td>
+                    <input type="text" placeholder="lastname" pattern="[A-Za-z]{4,10}" id="lnm" required/><br/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Age</label>
+                </td>
+                <td>
+                    <input type="number" size="2" min="18" max="60" id="age" required/>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Email</label>
+                </td>
+                <td>
+                    <input type="email" required >
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>Mobile Number</label>
+                </td>  
+                <td>
+                    <select>
+                        <option name=" "></option>
+                        <option name="ind">+91</option>
+                        <option name="usa">+22</option>
+                        <option name="aus">+11</option>
+                    </select>
+            
+                    <input type="text" pattern="[1-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                    <input type="text" pattern="[0-9]{1}" size="1">
+                </td>
+            </tr>
+            
+    <tr> <td><form>
+            <fieldset>
+            
+                    <legend>Address</legend>
+            <p>
+                    <input type = "text"
+                    id = "myText" maxlength="100" />
+            </p>
+                <p>
+                    <label>Street Address</label>
+                    <input type = "text"
+                    id = "myText1" />
+                </p>
+                <p>
+                    <label>State</label>
+                    <input type = "text"
+                        id = "myText1" />
+                </p>
+            <p>
+                <label>Country</label>
+                <select>
+                    <option name=" "></option>
+                    <option name="ind">INDIA</option>
+                    <option name="usa">USA</option>
+                    <option name="uk">UK</option>
+                    <option name="aus">AUSTRALIA</option>
+                    <option name="newyork">NEWYORK</option>
+                </select>
+            </p>
+            <p>
+                <label>Pin Code</label>
+                <input type="text" placeholder="Enter pincode" required pattern="^[0-9]{6}$"/>
+            </p>
+        </fieldset></form></td></tr>
+        </table>
+
+        <tr><form>
+            <td><span>Trainer Preference :</span></td><br>
+            <td><label for="chkmale">
+                <input type="radio" name="gender" id="chkmale" onclick="displayRadioValue()">
+                Male Trainer<br/>
+            </label>
+                <div id="trainername2" style="display: none">
+                    Trainer Name
+                    <input type="text"  id="trainername2">
+                    others
+                    <input type="text"   id="others2">
+                </div>
+                <br>
+
+                <label for="chkfemale">
+                <input type="radio" name="gender" id="chkfemale" onclick="displayRadioValue()">
+                Female Trainer<br/>
+            </label>
+
+                <div id="trainername1" style="display: none">
+                    Trainer Name
+                    <input type="text"  id="trainername1">
+                    others
+                    <input type="text"   id="others">
+                    </div>
+                    <br>
+
+            <label for="chkothers">
+                <input type="radio" name="gender" id="chkothers" onclick="displayRadioValue()">
+                 No Preference<br/>
+            </label>
+     
+                 <div id="trainername2" style="display: none">
+                 Trainer Name
+                 <input type="text"  id="trainername">
+                 others
+                 <input type="text"   id="others">
+                 </div>
+            </td></form>
+        </tr>
+            <div>
+                <label>Do you need a Physiotherapist ?</label><br/>
+                <input type="radio" name="reason" value="Yes" id="hi">Yes
+                <input type="radio" name="reason" value="No" id="hi">No
+            </div>
+
+            <tr><td>Appointment :</td></tr>
+            <table border="1" align="page-left" cellspacing="2" cellpadding="4">
+                <tr>
+                    <td><strong>Day</strong></td>
+                    <td><strong>7-9a.m</strong></td>
+                    <td><strong>9-11am</strong></td>
+                    <td><strong>11-1pm</strong></td>
+                    <td><strong>1-3pm</strong></td>
+                    <td><strong>3-5pm</strong></td>
+                </tr>
+                <tr>
+                    <td><strong>Monday</strong></td>
+                    <td><input type="radio" name="one" value="1">1</td>
+                    <td><input type="radio" name="one" value="2">2</td>
+                    <td><input type="radio" name="one" value="3">3</td>
+                    <td><input type="radio" name="one" value="4">4</td>
+                    <td><input type="radio" name="one" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Tuesday</strong></td>
+                    <td><input type="radio" name="sev" value="1">1</td>
+                    <td><input type="radio" name="sev" value="2">2</td>
+                    <td><input type="radio" name="sev" value="3">3</td>
+                    <td><input type="radio" name="sev" value="4">4</td>
+                    <td><input type="radio" name="sev" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Wednesday</strong></td>
+                    <td><input type="radio" name="six" value="1">1</td>
+                    <td><input type="radio" name="six" value="2">2</td>
+                    <td><input type="radio" name="six" value="3">3</td>
+                    <td><input type="radio" name="six" value="4">4</td>
+                    <td><input type="radio" name="six" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Thursday</strong></td>
+                    <td><input type="radio" name="five" value="1">1</td>
+                    <td><input type="radio" name="five" value="2">2</td>
+                    <td><input type="radio" name="five" value="3">3</td>
+                    <td><input type="radio" name="five" value="4">4</td>
+                    <td><input type="radio" name="five" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Friday</strong></td>
+                    <td><input type="radio" name="four" value="1">1</td>
+                    <td><input type="radio" name="four" value="2">2</td>
+                    <td><input type="radio" name="four" value="3">3</td>
+                    <td><input type="radio" name="four" value="4">4</td>
+                    <td><input type="radio" name="four" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Saturday</strong></td>
+                    <td><input type="radio" name="three" value="1">1</td>
+                    <td><input type="radio" name="three" value="2">2</td>
+                    <td><input type="radio" name="three" value="3">3</td>
+                    <td><input type="radio" name="three" value="4">4</td>
+                    <td><input type="radio" name="three" value="5">5</td>
+                </tr>
+                <tr>
+                    <td><strong>Sunday</strong></td>
+                    <td><input type="radio" name="two" value="1">1</td>
+                    <td><input type="radio" name="two" value="2">2</td>
+                    <td><input type="radio" name="two" value="3">3</td>
+                    <td><input type="radio" name="two" value="4">4</td>
+                    <td><input type="radio" name="two" value="5">5</td>
+                </tr>
+            </table>
+
+            <div>
+                <tr>
+                    <td>Select a Package  :</td> <br>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="package"  onclick="myFun(this.value)" value="1200" >One Time Assessment Only      (INR 500)</td> <br>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="package"  onclick="myFun(this.value)" value="3200">4 Week Session      (INR 400/Session)</td> <br>
+                </tr>
+                <tr>
+                    <td><input type="radio" name="package"  onclick="myFun(this.value)" value="4200">12 week session      (INR 300/session)</td> <br>
+                </tr>
+                <tr>
+                <td>Other
+                    <input type="text"><br> Quote will be shared on phone call </td>
+                </tr>
+            </div>
+
+            <table align="page-left" cellpadding="2" cellspacing="4">
+        
+                <tr>
+                    <td><input type="text" name="rupee" maxlength="2" id="result"> <br>INR</td>
+                    
+                    <td><input type="text" name="rupee" maxlength="2" id="paise"> <br>Paise</td>
+                </tr>
+                
+
+                <div>
+                    <button type="submit" class="btn btn-primary" routerLink="/sas">Submit</button>
+      
+                </div>
+
+            </table>
+                   
+   
+</body>
+</html>
